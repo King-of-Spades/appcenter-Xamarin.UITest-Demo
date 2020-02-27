@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Ignore this line, it's for an experiment with how GitHub is merging.
 # Environment Variables created by App Center
 # $APPCENTER_SOURCE_DIRECTORY
 # $APPCENTER_OUTPUT_DIRECTORY
