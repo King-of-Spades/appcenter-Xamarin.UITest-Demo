@@ -1,4 +1,4 @@
-This is an experimental branch, you shouldn't be seeing this unless you're experimenting.
+This is an experimental branch.
 
 # Build Status
 
