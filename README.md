@@ -1,4 +1,4 @@
-This is an experimental branch. I'm experimenting with PR behavior.
+This is an experimental branch. I'm experimenting with PRs.
 
 # Build Status
 
