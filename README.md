@@ -1,17 +1,13 @@
 # Build Status
-
 - Android Debug Build [![Build status](https://build.appcenter.ms/v0.1/apps/44bda37a-6d93-4fdd-abfe-c5aeff6c5c8a/branches/master/badge)](https://appcenter.ms/orgs/XTCTeam/apps/Kent-G.-UITestDemo/build/branches/master)
 
 # Overview (Xamarin.UITest - Cross-Platform)
-
 This sample is designed for use in Visual Studio & includes the sourcecode for a Xamarin.Forms app on Android & iOS platforms & a Xamarin.UITest project. It also includes a precompiled APK & IPA incase you want to try only building, running and uploading Xamarin.UITest.
 
 # Building & running locally
-
 You can either build the entire solution, or you can just build the Xamarin.UITest project.
 
 ## Windows users
-
 Compared to running on Mac, Xamarin.UITests have additional requirements and limitations as follows:
 
 - Xamarin.UITest cannot be run locally against iOS apps in Windows, even if using a paired Mac capable of building iOS apps.
@@ -23,7 +19,6 @@ Compared to running on Mac, Xamarin.UITests have additional requirements and lim
 - You must use the `.ApkFile()` method to [point to the APK](UITestDemo.UITest/AppInitializer.cs#L30).
 
 ## Running locally without building the iOS app
-
 You can run the UITest project locally without building the app projects by using precompiled files:
 
 1. Open "UITestDemo.UITest > AppInitializer.cs"
@@ -35,9 +30,7 @@ You can run the UITest project locally without building the app projects by usin
    - **VS for Mac** - Go to **View > Pads > Unit Tests > Run All** (When testing on Windows, only Android is supported.)
 
 ## Running locally with building the Android/iOS apps
-
 1. You can build individual projects or the entire solution by right-clicking them in the solution pad and selecting "Build [Project/Solution Name]."
-
 2. Be aware of the following considerations for using Xamarin.UITest with these built projects:
 
    - 'UITestDemo.Droid' must be built using a "Release" configuration. This is because by default a "Debug" build of a Xamarin.Android project includes the "Shared Mono Runtime" which is not compatible with Xamarin.UITest.
@@ -49,7 +42,6 @@ You can run the UITest project locally without building the app projects by usin
    - **VS for Windows** - Go to **Test > Windows > Test Explorer > Run All**. When testing on Windows, only Android is supported; and you must also set the [`.ApkFile()` path in the AppInitializer.cs ConfigureApp statement](/Xamarin.UITest/UITestDemo/UITestDemo.UITest/AppInitializer.cs#L31)
 
 # Uploading tests
-
 1. Build the Xamarin.UITest project.
 2. Generate a command line for upload: [Directions](/../../#upload-commands)
 3. Update the upload command with project-specific arguments:
@@ -57,19 +49,16 @@ You can run the UITest project locally without building the app projects by usin
    - **Windows** The '.sh' files are not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
 
 #### See Also
-
 - Android upload script: [android.sh](android.sh)
 - iOS upload script: [ios.sh](ios.sh)
 
 # Building in App Center
-
 Documentation reference: https://docs.microsoft.com/en-us/appcenter/build/
 This blog also details most of the steps required, though a few details are out of date: https://tomsoderling.github.io/AppCenter-Automated-UI-tests-on-build/
 
 **To build apps in App Center, you must own the repository you wish to build from. For example, to use the samples in this repo, you have to fork this repository.**
 
 ## Integrating Test Suite on Android
-
 If you have the build working on it's own in App Center Build, then there just a few more steps to enable Test support. These steps are handled by the script called [appcenter-post-build.sh](Droid/appcenter-post-build.sh) in the "Droid" project folder.
 
 1. For this example, Add the Custom Environment Varaibles to your build settings in App Center:
@@ -81,7 +70,6 @@ If you have the build working on it's own in App Center Build, then there just a
 2. Make sure the first time you use the script to manually select "Save & Build" in the App Center Build dialog. Otherwise the build script will be ignored.
 
 ### Background Info on how the script works
-
 To use this script note the following:
 
 - Technically all of the commented sections & 'echo' statements are just there to help you understand what the script is doing; the script would work if reduced only to declaring the variables & evaluating statements.
